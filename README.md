@@ -59,7 +59,9 @@ This library solves the 3D trilateration problem using a non-linear least square
 
 1.  It first calculates the centroid of the provided anchor points to use as a starting estimate.
 2.  It uses the Nelder-Mead simplex method (via `gonum.org/v1/gonum/optimize`) to find the coordinate $(x, y, z)$ that minimizes the sum of squared residuals:
-    $$ \sum\_{i=1}^{n} (\sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - d_i)^2 $$
+
+    $$\sum\_{i=1}^{n} (\sqrt{(x-x_i)^2 + (y-y_i)^2 + (z-z_i)^2} - d_i)^2$$
+
     Where $(x_i, y_i, z_i)$ is the position of anchor $i$ and $d_i$ is the measured distance.
 
     > The solver requires at least 4 anchors to uniquely resolve the 3D position and avoid mirror ambiguity.
