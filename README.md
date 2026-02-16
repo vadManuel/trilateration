@@ -68,5 +68,5 @@ This library solves the 3D trilateration problem using a non-linear least square
 
 ## Requirements
 
-- Go 1.18+
+- Go 1.24+
 - `gonum.org/v1/gonum`
